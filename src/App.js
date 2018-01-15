@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Link, history } from 'react-router-dom';
+import * as Books from './BooksAPI';
 
 // import * as BooksAPI from './BooksAPI'
 //Components
@@ -9,23 +10,62 @@ import BookShelf from './book-shelf/book-shelf-page';
 import './App.css'
 
 class BooksApp extends React.Component {
-    state = {
-        /**
-         * TODO: Instead of using this state variable to keep track of which page
-         * we're on, use the URL in the browser's address bar. This will ensure that
-         * users can use the browser's back and forward buttons to navigate between
-         * pages, as well as provide a good URL they can bookmark and share.
-         */
-        showSearchPage: false
+
+
+    constructor(props) {
+        super(props);
+        this.moveToShelf = this.moveToShelf.bind(this);
+        this.fetchBooksApi = this.fetchBooksApi.bind(this);
+        this.getFilteredBooksArray = this.getFilteredBooksArray.bind(this);
+    }
+    state = {};
+
+
+
+    getFilteredBooksArray(bookShelfFilter) {
+
+        let bookShelf= [];
+        if(this.state.books)
+            bookShelf = this.state.books.filter(book => book.shelf === bookShelfFilter);
+        return bookShelf
+
+    }
+
+    moveToShelf( e, changedBook) {
+        let shelf = e.target.value;
+        Books.update( changedBook, shelf ).then((data)=> {
+            this.fetchBooksApi()
+        })
+    }
+
+    fetchBooksApi() {
+        console.log('calling featchBooksApi');
+        Books.getAll().then(data => this.setState({books: data}) );
+    }
+
+
+    componentDidMount() {
+        this.fetchBooksApi();
     }
 
     render( ) {
         return(
             <div className="app">
-                <Route path='/search' component={SearchPage} />
-                <Route exact path='/' component={BookShelf}>
+                <Route path='/search' render={()=> (
+                    <SearchPage
+                        moveToShelf={ this.moveToShelf }
+                        fetchBooksApi={ this.fetchBooksApi }
+                        getFilteredBooksArray={ this.getFilteredBooksArray }
+                        books={ this.state.books } />)
+                } />
+                <Route exact path='/' render={()=>
+                    (<BookShelf
+                        moveToShelf={ this.moveToShelf }
+                        fetchBooksApi={ this.fetchBooksApi }
+                        getFilteredBooksArray={ this.getFilteredBooksArray }
+                        books={ this.state.books } />)
+                }/>
 
-                </Route>
             </div>
         )
     }
