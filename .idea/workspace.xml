@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="054b5a35-01a6-4d04-b118-1537b7c5cecb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/book-shelf/book-shelf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BooksAPI.js" afterPath="$PROJECT_DIR$/src/BooksAPI.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/book-shelf/book-shelf-page.js" afterPath="$PROJECT_DIR$/src/book-shelf/book-shelf-page.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/search/search-page.js" afterPath="$PROJECT_DIR$/src/search/search-page.js" />
-    </list>
+    <list default="true" id="054b5a35-01a6-4d04-b118-1537b7c5cecb" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +22,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search-page.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="search-page.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/search/search-page.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="456">
@@ -37,6 +30,19 @@
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="-1142">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -303,12 +309,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1516041773139</updated>
-      <workItem from="1516041775167" duration="8792000" />
+      <workItem from="1516041775167" duration="9153000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8792000" />
+    <option name="totallyTimeSpent" value="9153000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -392,6 +398,17 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="-1142">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
