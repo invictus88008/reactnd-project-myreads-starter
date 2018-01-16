@@ -24,19 +24,19 @@ export default class BookShelfPage extends Component {
                   {/** Currently Reading Bookshelf **/}
                   <BookShelf
                       shelfName="Currently Reading"
-                      moveToShelf={ this.moveToShelf }
+                      moveToShelf={ this.props.moveToShelf }
                       books={ this.props.getFilteredBooksArray('currentlyReading') }
                   />
                   {/** Read Book Shelf **/}
                 <BookShelf
                     shelfName="Read"
-                    moveToShelf={ this.moveToShelf }
+                    moveToShelf={ this.props.moveToShelf }
                     books={ this.props.getFilteredBooksArray('read') }
                 />
                   {/** Want to Read **/}
                 <BookShelf
                     shelfName="Want to Read"
-                    moveToShelf={ this.moveToShelf }
+                    moveToShelf={ this.props.moveToShelf }
                     fetchBooksApi={ this.fetchBooksApi }
                     books={ this.props.getFilteredBooksArray('wantToRead') }
                 />
