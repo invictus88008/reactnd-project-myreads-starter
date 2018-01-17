@@ -51,7 +51,7 @@ export default class SearchPage extends Component {
                                             <div className="book-cover" style={{
                                                 width: 128,
                                                 height: 193,
-                                                backgroundImage: `url("${book.imageLinks.thumbnail}")`
+                                                backgroundImage: `url("${book.imageLinks ? book.imageLinks.thumbnail : "http://via.placeholder.com/128x193?text=No%20Cover"}")`
                                             }}/>
                                             <div className="book-shelf-changer">
                                                 <select onChange={ (e) => this.props.moveToShelf(e, book, this) }

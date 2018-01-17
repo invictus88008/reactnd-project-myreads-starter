@@ -34,12 +34,11 @@ class BooksApp extends React.Component {
     moveToShelf( e, changedBook) {
         let shelf = e.target.value;
         Books.update( changedBook, shelf ).then((data)=> {
-            this.fetchBooksApi()
+            this.fetchBooksApi();
         })
     }
 
     fetchBooksApi() {
-        console.log('calling featchBooksApi');
         Books.getAll().then(data => this.setState({books: data}) );
     }
 
